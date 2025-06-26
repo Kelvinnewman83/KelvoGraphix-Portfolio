@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KelvoGraphix Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Resources/KelvoGraphix.png" type="image/png">
+</head>
+<body>
+    <header class="navbar">
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <div class="logo">
+            <img src="Resources/KelvoGraphix.png" alt="KelvoGraphix Logo" height="50">
+            <h4>KelvoGraphix</h4>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="links" href="#home">Home</a></li>
+                <li><a class="links" href="#portfolio">Portfolio</a></li>
+                <li><a class="links" href="#about">About</a></li>
+                <li><a class="links" href="#services">Services</a></li>
+                <li><a class="links" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section-container" id="home">
+            <main class="hero-section">
+                <div class="hero-image">
+                    <img src="Resources/Hero-Image.png" alt="Hero-Image" height="500">
+                </div>
+                <div class="hero-text">
+                    <h1>Welcome to KelvoGraphix</h1>
+                    <p>Your one-stop solution for stunning graphic design.</p><br>
+                    <a href="#portfolio"><button>View Portfolio</button></a>
+                    <div class="tools">
+                        <img src="Resources/Ps.png" alt="Ps" height="30" width="30">
+                        <img src="Resources/Ai.png" alt="Ai" height="30" width="30">
+                        <img src="Resources/Cdr.png" alt="Cdr" height="30" width="30">
+                    </div>
+                </div>
+            </main>
+    </section>
+
+    <section class="portfolio-section" id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/736x/f2/ae/d5/f2aed51f9eb62a8907336dd1778bec2c.jpg" alt="KelvoGraphix Creative Flyer" height="300" width="300">
+                <h3>Professional Business Flyer</h3>
+                <p>Modern and sleek layout tailored to promote services and boost brand presence.</p>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/736x/88/15/3d/88153dd4cf4930ef6d1f2c66cbd3416e.jpg" alt="KelvoGraphix Creative Poster" height="300" width="300">
+                <h3>Faith & Fellowship Flyer</h3>
+                <p>An uplifting design created to inspire, inform, and invite with a spiritual touch.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/736x/06/30/e6/0630e63a37d7ef817f4705d1627bd89d.jpg" alt="KelvoGraphix Creative Poster" height="300" width="300">
+                <h3>Night Vibes Party Flyer</h3>
+                <p>A vibrant, high-energy design made to hype up any party or nightlife event.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <h2>About KelvoGraphix</h2>
+        <p><b>KelvoGraphix</b> is a creative design and printing brand committed to delivering bold, high-quality visuals that speak for your business. We specialize in professional graphics that grab attention and leave a lasting impression — from stunning flyers and posters to business cards, banners, and branded materials.</p>
+
+        <p>With a strong focus on both digital graphics and print solutions, we help individuals, startups, and companies bring their ideas to life through clean, creative, and impactful designs.</p>
+
+        <p>Our mission is to provide exceptional design services that not only meet but exceed our clients' expectations, ensuring their brand stands out in a crowded marketplace.</p>
+
+        <p>Whether you need a single design or a complete branding package, KelvoGraphix is here to help you make your mark.</p>
+
+        <p>At KelvoGraphix, your design is your identity — and we’re here to make it stand out.</p>
+    </section>
+
+    <section class="services-section" id="services">
+    <h2>Our Services</h2>
+    <div>
+        <ul>
+            <li>🎨 Flyer & Poster Design</li>
+            <li>💼 Business Cards & Branding</li>
+            <li>📐 Banners & Large Format Prints</li>
+            <li>📲 Digital Marketing Materials</li>
+            <li>🛍️ Product & Event Packaging</li>
+            <li>🖨️ Custom Printing Solutions</li>
+        </ul>
+        <p><em>Clean visuals. Bold impressions. Professional results.</em></p>
+    </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-header">
+            <h2>Contact Us</h2>
+            <p>Let's bring your ideas to life. Reach out to us for design inquiries, quotes, or collaborations.</p>
+        </div>
+
+        <div>          
+            <ul>
+                <li>📧 Email: <a href="mailto:kelvinnewman83@gmail.com">kelvographix@gmail.com</a></li>
+                <li>📞 Phone: <a href="tel:+2349069012583">+234 906 901 2583</a></li>
+                <li>📍 Location: Abuja, Nigeria</li>
+                <li>📱 Instagram: <a href="https://www.threads.com/?xmt=AQF03p5wjZftA-j2sIAVw7zs08z2ASQ-USnT-SeOiNJM7tw" target="_blank" rel="noopener">@KelvoGraphix</a></li>
+            </ul>
+        </div>
+    </section>
+
+<script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+    faders.forEach(fade => observer.observe(fade));
+
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+</script>
+    
+</body>
+</html>
